@@ -31,3 +31,11 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Ignore les fichiers générés par Maven
+/target/
+/*.log
+*.class
+*.idea/
+*.vscode/
+
