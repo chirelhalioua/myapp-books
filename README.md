@@ -1,6 +1,6 @@
 **MyApp** 💻
 
-**Description**
+🌟 **Description**
 MyApp est une application Spring Boot conçue pour gérer une collection de livres. Elle offre une API REST simple permettant d'ajouter, consulter, modifier et supprimer des livres. Le projet utilise Hibernate pour la gestion des entités et H2 comme base de données en mémoire.
 
 ---
