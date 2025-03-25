@@ -1,19 +1,20 @@
-# Utiliser l'image OpenJDK 17
-FROM openjdk:17-jdk-slim
-
-# Définir le répertoire de travail
+# Étape 1 : Construire l'application avec Maven
+FROM maven:3.8.7-openjdk-17 AS builder
 WORKDIR /app
 
-# Copier le projet
+# Copier les fichiers du projet
 COPY pom.xml .
 COPY src ./src
 
-# Installer Maven et compiler l'application
-RUN apt-get update && apt-get install -y maven
+# Compiler l'application sans exécuter les tests
 RUN mvn clean package -DskipTests
 
-# Copier le JAR généré
-COPY target/*.jar app.jar
+# Étape 2 : Créer une image plus légère pour exécuter l'application
+FROM openjdk:17-jdk-slim
+WORKDIR /app
+
+# Copier le fichier JAR généré depuis l’étape précédente
+COPY --from=builder /app/target/*.jar app.jar
 
 # Exposer le port 8080
 EXPOSE 8080
