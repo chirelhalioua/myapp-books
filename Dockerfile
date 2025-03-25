@@ -1,5 +1,5 @@
 # Étape 1 : Construire l'application avec Maven
-FROM maven:3.8.7-openjdk-17 AS builder
+FROM maven:3.9.6-eclipse-temurin-17 AS builder
 WORKDIR /app
 
 # Copier les fichiers du projet
@@ -9,7 +9,7 @@ COPY . .
 RUN mvn clean package -DskipTests
 
 # Étape 2 : Créer une image légère pour exécuter l'application
-FROM openjdk:17-jdk-slim
+FROM eclipse-temurin:17-jdk
 WORKDIR /app
 
 # Copier le JAR généré
