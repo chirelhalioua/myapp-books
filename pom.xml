@@ -11,7 +11,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.0</version> <!-- Assurez-vous que cette version convient -->
+        <version>2.7.0</version> 
         <relativePath/>
     </parent>
 
@@ -29,12 +29,13 @@
             <scope>runtime</scope>
         </dependency>
 
+        <!-- JPA (Hibernate) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
 
-
+        <!-- API Java Persistence -->
         <dependency>
             <groupId>javax.persistence</groupId>
             <artifactId>javax.persistence-api</artifactId>
@@ -46,18 +47,19 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
 
     <build>
+        <finalName>myapp-books</finalName> <!-- Fixe le nom du fichier JAR -->
+
         <plugins>
-            <!-- Spring Boot Maven Plugin -->
+            <!-- Plugin Spring Boot pour packager l'application -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                <mainClass>com.example.MyApp.MyApp</mainClass>
-            </configuration>
+                    <mainClass>com.example.MyApp.MyApp</mainClass> <!-- Assurez-vous que c'est la bonne classe -->
+                </configuration>
             </plugin>
         </plugins>
     </build>
