@@ -4,44 +4,39 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.example</groupId>
-    <artifactId>HelloWorld</artifactId>
+    <artifactId>myapp-books</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.0</version> 
+        <version>2.7.18</version> <!-- Version de Spring Boot -->
         <relativePath/>
     </parent>
 
+    <properties>
+        <java.version>21</java.version> <!-- Version de Java -->
+    </properties>
+
     <dependencies>
-        <!-- Spring Boot Starter Web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
-        <!-- H2 Database -->
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <scope>runtime</scope>
         </dependency>
-
-        <!-- JPA (Hibernate) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
-
-        <!-- API Java Persistence -->
         <dependency>
             <groupId>javax.persistence</groupId>
             <artifactId>javax.persistence-api</artifactId>
         </dependency>
-
-        <!-- Tests -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -50,15 +45,13 @@
     </dependencies>
 
     <build>
-        <finalName>myapp-books</finalName> <!-- Fixe le nom du fichier JAR -->
-
+        <finalName>myapp-books</finalName>
         <plugins>
-            <!-- Plugin Spring Boot pour packager l'application -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.example.MyApp.MyApp</mainClass> <!-- Assurez-vous que c'est la bonne classe -->
+                    <mainClass>com.example.demo.Myapp</mainClass> <!-- Ta classe principale -->
                 </configuration>
             </plugin>
         </plugins>
