@@ -25,35 +25,6 @@ Bienvenue sur **MyApp Books** ! Ce projet est une application de gestion de livr
 
 ### Étapes pour démarrer le projet
 
-# Créer le contenu du fichier README.md en markdown
-readme_content = """
-# 📚 MyApp Books 📚
-
-Bienvenue sur **MyApp Books** ! Ce projet est une application de gestion de livres créée avec **Spring Boot** et **JPA**. Il permet de gérer une collection de livres (ajouter, afficher, mettre à jour et supprimer des livres).
-
-## 🚀 Fonctionnalités
-
-- **Ajouter un livre** ➕
-- **Afficher la liste des livres** 📋
-- **Mettre à jour un livre** ✏️
-- **Supprimer un livre** 🗑️
-
-## 🛠️ Technologies utilisées
-
-- **Spring Boot** ⚡️
-- **JPA (Hibernate)** 💾
-- **H2 Database** 🗃️ (Base de données en mémoire pour les tests)
-- **Maven** 🔧
-
-## 📦 Installation
-
-### Prérequis
-
-- **JDK 21** ou supérieur ☕
-- **Maven** ou **IDE comme IntelliJ IDEA / Eclipse** 🖥️
-
-### Étapes pour démarrer le projet
-
 1. Clone ce dépôt sur ton ordinateur :
 
    ```bash
